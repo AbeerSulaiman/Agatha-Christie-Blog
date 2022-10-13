@@ -1,0 +1,142 @@
+.container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "content content"
+    "author link";
+  justify-items: center;
+}
+
+#content {
+  font-style: italic;
+  margin: 50px;
+  font-size: 30px;
+  font-weight: 600;
+  grid-area: content;
+}
+#author {
+  grid-area: author;
+}
+#link {
+  color: #2a4465;
+  text-decoration-line: none;
+  grid-area: link;
+}
+#link:hover {
+  text-decoration-line: underline;
+}
+.details-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-box {
+  margin: 50px;
+  width: 700px;
+  height: auto;
+  padding: 30px;
+  border: 1px solid #2a4465;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "card-content card-img"
+    "books-btn books-btn";
+  justify-items: center;
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+.card-box,
+.books-box:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+  transition: all 0.5s ease-out;
+}
+.books-box:hover:after {
+  transition: 0.5s ease;
+}
+#card-content {
+  grid-area: card-content;
+}
+#card-img {
+  grid-area: card-img;
+}
+#books-btn {
+  grid-area: books-btn;
+}
+.book-img {
+  width: 340px;
+  margin: 15px;
+}
+.book-info {
+  margin: 20px;
+  padding: 30px;
+}
+.checked {
+  color: #f7d636;
+}
+.description {
+  font-size: 14px;
+  padding-top: 0;
+}
+.icon {
+  padding-right: 5px;
+}
+.book-img:hover {
+  transform: translateY(-3px);
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+.books-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 100px 10px;
+}
+.books-box {
+  width: 370px;
+  height: 370px;
+  border-radius: 100%;
+  background-color: #e9adcf;
+  overflow: hidden;
+}
+.book-img > img {
+  object-fit: cover;
+}
+.box2 {
+  background-color: #fde586;
+}
+.box3 {
+  background-color: #afe0e5;
+}
+@media screen and (max-width: 768px) {
+  html,
+  body {
+    margin: 0 auto;
+    overflow-x: hidden;
+  }
+  #content {
+    font-size: 15px;
+    justify-content: center;
+  }
+  #author {
+    font-size: 12px;
+  }
+  .books-container {
+    flex-direction: column;
+  }
+  .books-box {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 10px;
+  }
+  .card-img {
+    width: 200px;
+    height: 200px;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

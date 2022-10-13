@@ -1,0 +1,17 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+body {
+  font-family: "Montserrat";
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+h1,
+h2,
+h3,
+h4,
+p,
+span {
+  color: #2a4465;
+}
+h1 {
+    font-weight: bold;
+}
